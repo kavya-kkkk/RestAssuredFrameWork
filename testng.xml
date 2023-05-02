@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Testsuite">
+<listeners>
+<listener class-name="api.utilies.ExtendReportManager">
+</listener>
+</listeners>
+  <test thread-count="5" name="RESTAPITest">
+    <classes>
+      <class name="api.utilies.ExcelReaderDataProviderExample"/>
+    </classes>
+  </test> <!-- RESTAPITest -->
+</suite> <!-- Testsuite -->
