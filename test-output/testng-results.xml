@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-02T09:27:21 IST" name="Default suite" finished-at="2023-05-02T09:27:29 IST" duration-ms="8523">
+  <suite started-at="2023-05-02T13:42:37 IST" name="Default suite" finished-at="2023-05-02T13:42:41 IST" duration-ms="4515">
     <groups>
     </groups>
-    <test started-at="2023-05-02T09:27:21 IST" name="Default test" finished-at="2023-05-02T09:27:29 IST" duration-ms="8523">
+    <test started-at="2023-05-02T13:42:37 IST" name="Default test" finished-at="2023-05-02T13:42:41 IST" duration-ms="4515">
       <class name="getrequest.RestAssuredAPITest">
-        <test-method signature="GetBooksDetails()[pri:0, instance:getrequest.RestAssuredAPITest@11dee337]" started-at="2023-05-02T09:27:21 IST" name="GetBooksDetails" finished-at="2023-05-02T09:27:27 IST" duration-ms="6299" status="PASS">
+        <test-method signature="GetBooksDetails()[pri:0, instance:getrequest.RestAssuredAPITest@10e31a9a]" started-at="2023-05-02T13:42:37 IST" name="GetBooksDetails" finished-at="2023-05-02T13:42:40 IST" duration-ms="3002" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetBooksDetails -->
-        <test-method signature="queryParameter()[pri:0, instance:getrequest.RestAssuredAPITest@11dee337]" started-at="2023-05-02T09:27:27 IST" name="queryParameter" finished-at="2023-05-02T09:27:29 IST" duration-ms="1959" status="PASS">
+        <test-method signature="queryParameter()[pri:0, instance:getrequest.RestAssuredAPITest@10e31a9a]" started-at="2023-05-02T13:42:40 IST" name="queryParameter" finished-at="2023-05-02T13:42:41 IST" duration-ms="1444" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- queryParameter -->

@@ -39,8 +39,8 @@ public void GetBooksDetails() {
     		
 }
 
-	
-	
+	 
+	 
 @Test
 public void queryParameter() {
 	//Defining the base URI

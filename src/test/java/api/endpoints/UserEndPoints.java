@@ -17,7 +17,7 @@ public static  Response createuser(User playload)
 	//user is pojo class we need to create
 	{
 		Response response=given()
-		.contentType(ContentType.JSON)
+		.contentType( ContentType.JSON)
 		.accept(ContentType.JSON)
 		.body(playload)
 		.when()

@@ -9,7 +9,7 @@ public class Validateresponsebody {
     
     @Test
     public void test() {
-        // make the API request
+         // make the API request
         Response response = RestAssured.get("https://jsonplaceholder.typicode.com/posts/1");
         
         // get the actual response body

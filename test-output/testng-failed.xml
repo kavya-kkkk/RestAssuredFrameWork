@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="api.test.RestApiTest">
+      <class name="api.utilies.ExcelReaderDataProviderExample">
         <methods>
-          <include name="createUser"/>
+          <include name="createUser" invocation-numbers="0 1 2 3 4 5"/>
         </methods>
-      </class> <!-- api.test.RestApiTest -->
+      </class> <!-- api.utilies.ExcelReaderDataProviderExample -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
