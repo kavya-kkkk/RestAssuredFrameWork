@@ -20,7 +20,7 @@ public void GetBooksDetails() {
 	RequestSpecification httpRequest = RestAssured.given(); 
 	// specify the method type (GET) and the parameters if any. 
 	//In this case the request does not take any parameters 
-	Response response = httpRequest.request(Method.GET, "");
+	Response response = httpRequest.request(Method.GET, ""); 
 	// Get the status code of the request. 
     //If request is successful, status code will be 200
    int statusCode = response.getStatusCode();

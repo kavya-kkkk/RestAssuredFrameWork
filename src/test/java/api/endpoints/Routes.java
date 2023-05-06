@@ -15,5 +15,5 @@ public class Routes {
 	public static String deleteurl = baseurl + "user/{username}";
 	// store module......
 	// we can add multiple url's like this
-}
+} 
 //https://petstore.swagger.io/v2/user/{username}

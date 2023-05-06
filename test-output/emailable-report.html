@@ -9,11 +9,157 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">4,515</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">3</td><td class="num">10,587</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">getrequest.RestAssuredAPITest</td><td><a href="#m0">GetBooksDetails</a></td><td rowspan="1">1683015157410</td><td rowspan="1">3002</td></tr><tr class="passedeven"><td><a href="#m1">queryParameter</a></td><td rowspan="1">1683015160428</td><td rowspan="1">1444</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="3">com.w2a.zoho.utilities.FactoApi</td><td><a href="#m0">myTest</a></td><td rowspan="3">1683362190797</td><td rowspan="3">339</td></tr><tr class="failedeven"><td><a href="#m1">myTest</a></td></tr><tr class="failedeven"><td><a href="#m2">myTest</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.w2a.zoho.utilities.FactoApi</td><td><a href="#m3">LoginjwtToken</a></td><td rowspan="1">1683362183921</td><td rowspan="1">5292</td></tr><tr class="passedeven"><td><a href="#m4">myTest</a></td><td rowspan="1">1683362190191</td><td rowspan="1">595</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">getrequest.RestAssuredAPITest#GetBooksDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">getrequest.RestAssuredAPITest#queryParameter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.w2a.zoho.utilities.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/insertClients</td><td>{\r\n&quot;
+  + &quot;             \&quot;data\&quot;: {\r\n&quot;
+  + &quot;                 \&quot;client_name\&quot;: \&quot;kavin\&quot;,\r\n&quot;
+  + &quot;                 \&quot;entity_name\&quot;: \&quot;My New Entity3\&quot;,\r\n&quot;
+  + &quot;                 \&quot;sub_category\&quot;: \&quot;My New Subcategory3\&quot;,\r\n&quot;
+  + &quot;                 \&quot;client_address\&quot;: \&quot;My New Address3\&quot;,\r\n&quot;
+  + &quot;                 \&quot;primary_contact_details\&quot;: \&quot;909090909\&quot;,\r\n&quot;
+  + &quot;                 \&quot;secondary_contact_details\&quot;: \&quot;9999999991\&quot;,\r\n&quot;
+  + &quot;                 \&quot;billing_address\&quot;: \&quot;My New Billing Address3\&quot;,\r\n&quot;
+  + &quot;                 \&quot;sla_agreement\&quot;: \&quot;\&quot;,\r\n&quot;
+  + &quot;                 \&quot;client_components\&quot;: [\r\n&quot;
+  + &quot;                     \&quot;Address\&quot;\r\n&quot;
+  + &quot;                 ],\r\n&quot;
+  + &quot;                 \&quot;pricing\&quot;: \&quot;900000001\&quot;\r\n&quot;
+  + &quot;             }\r\n&quot;
+  + &quot;         }</td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========502expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [502]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.w2a.zoho.utilities.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/deleteClient</td><td>{\r\n&quot;
+              + &quot;    \&quot;data\&quot;:\r\n&quot;
+              + &quot;    {\r\n&quot;
+              + &quot;         \&quot;client_id\&quot;: \&quot;88ef3ebe-e6fb-5a8a-a192-054b8354af29\&quot;\r\n&quot;
+              + &quot;    }\r\n&quot;
+              + &quot;}</td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========502expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [502]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.w2a.zoho.utilities.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/updateClient</td><td>{\r\n&quot;
+          + &quot;    \&quot;data\&quot;: {\r\n&quot;
+          + &quot;        \&quot;client_name\&quot;: \&quot;Oracle24356\&quot;,\r\n&quot;
+          + &quot;        \&quot;entity_name\&quot;: \&quot;My New Entity5\&quot;,\r\n&quot;
+          + &quot;        \&quot;sub_category\&quot;: \&quot;My New Subcategory5\&quot;,\r\n&quot;
+          + &quot;        \&quot;client_address\&quot;: \&quot;My New Address5\&quot;,\r\n&quot;
+          + &quot;        \&quot;primary_contact_details\&quot;: \&quot;9090909095\&quot;,\r\n&quot;
+          + &quot;        \&quot;secondary_contact_details\&quot;: \&quot;9999999995\&quot;,\r\n&quot;
+          + &quot;        \&quot;billing_address\&quot;: \&quot;My New Billing Address5\&quot;,\r\n&quot;
+          + &quot;        \&quot;sla_agreement\&quot;: \&quot;pak5.jpg\&quot;,\r\n&quot;
+          + &quot;        \&quot;client_components\&quot;: [\r\n&quot;
+          + &quot;            \&quot;Address\&quot;,\r\n&quot;
+          + &quot;            \&quot;Employment\&quot;\r\n&quot;
+          + &quot;        ],\r\n&quot;
+          + &quot;        \&quot;pricing\&quot;: \&quot;9000000015\&quot;,\r\n&quot;
+          + &quot;        \&quot;client_id\&quot;: \&quot;88ef3ebe-e6fb-5a8a-a192-054b8354af29\&quot;\r\n&quot;
+          + &quot;    }\r\n&quot;
+          + &quot;}
+            </td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========502expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [502]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.w2a.zoho.utilities.FactoApi#LoginjwtToken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.w2a.zoho.utilities.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/fetchAllClients</td><td>&quot;&quot;</td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========200expected========200.0</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

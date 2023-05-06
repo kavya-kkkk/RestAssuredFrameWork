@@ -8,7 +8,7 @@ public class Putmethod {
 
   @Test
   public void updateUser() {
-    String requestBody = "{ \"name\": \"John Smith\", \"email\": \"john.smith@example.com\" }";
+    String requestBody = "{\"name\": \"morpheus\",\"job\": \"zion resident\"}";
     given()
       .contentType("application/json")
       .body(requestBody)

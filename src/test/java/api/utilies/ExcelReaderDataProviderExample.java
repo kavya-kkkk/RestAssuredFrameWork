@@ -19,6 +19,7 @@ import org.hamcrest.Matcher;
 import org.mozilla.javascript.ConsString;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -26,27 +27,34 @@ import com.aventstack.extentreports.model.Report;
 
 import api.endpoints.UserEndPoints;
 import api.playload.User;
+import io.cucumber.java.Before;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class ExcelReaderDataProviderExample {
-	private static final String EXCEL_FILE_PATH = "C:\\Users\\desktop\\eclipse\\RestAssured\\testdata\\exceldata.xlsx";
-	private static final String SHEET_NAME = "Sheet1";
+	private static final String EXCEL_FILE_PATH = "C:\\Users\\desktop\\eclipse\\RestAssured\\testdata\\data.xlsx";
+	private static final String SHEET_NAME = "API";
 
 	@DataProvider(name = "excelData")
-	public Iterator<Object[]> readExcelData() throws IOException {
+	public Iterator<Object[]> readExcelData() throws IOException 
+	{
 		FileInputStream fileInputStream = new FileInputStream(EXCEL_FILE_PATH);
 		Workbook workbook = WorkbookFactory.create(fileInputStream);
 		Sheet sheet = workbook.getSheet(SHEET_NAME);
 		List<Object[]> data = new ArrayList<Object[]>();
 
 		for (Row row : sheet) {
-			List<Object> rowData = new ArrayList<Object>();
-			for (Cell cell : row) {
+			List<Object> rowData = new ArrayList<Object>(); 
+			System.out.println(rowData);
+		//	Object  index=rowData.get(0);
+			// System.out.println("this index "+index);
+	{
+						for (Cell cell : row) {
 				switch (cell.getCellType()) {
 				case STRING:
 					rowData.add(cell.getStringCellValue());
+				//	System.out.println(rowData);
 					break;
 				case NUMERIC:
 					rowData.add(cell.getNumericCellValue());
@@ -63,15 +71,17 @@ public class ExcelReaderDataProviderExample {
 				}
 			}
 			data.add(rowData.toArray());
+			//System.out.println(rowData);
 		}
-
+		}
+ 
 		workbook.close();
 		fileInputStream.close();
 
 		return data.iterator();
 	}
 
-	/*//get
+	/*//get 
 	  @Test(priority=1,dataProvider = "excelData")
 	  
 	  public void testgetresponse(String url) 
@@ -87,9 +97,23 @@ public class ExcelReaderDataProviderExample {
 	  }*/
 	
 	  //post
-	@Test(priority=1,dataProvider = "excelData")
+	
+	
+		
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	@Test(priority=2,dataProvider = "excelData")
 	  
-	  public void createUser(String method ,String jsonbody, String url, String contenttype,double  status,String expectedresponsebody) 
+	  public void createUser(String method ,String jsonbody, String url,double  status,String expectedresponsebody) 
 			{ 
 		
 		
@@ -211,11 +235,6 @@ public class ExcelReaderDataProviderExample {
         	
         Reporter.log("Please provide a correct method name ");
         }
-				
-				
-				
-				
-				
 				
 				
 				

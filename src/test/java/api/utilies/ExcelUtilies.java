@@ -98,7 +98,7 @@ public class ExcelUtilies {
 	fo=new FileOutputStream(path);
 	workbook.write(fo);
 	}
-	fi=new FileInputStream(path); 
+	fi=new FileInputStream(path);  
 	workbook=new XSSFWorkbook (fi);
 	
 	if(workbook.getSheetIndex(sheetName)==-1) 

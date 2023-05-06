@@ -21,7 +21,7 @@ public class DataDrivenTest {
 		userpayload.setUsername(username);
 		userpayload.setFirstName(firstname);
 		userpayload.setLastName(lastname);
-		userpayload.setEmail(email);
+		userpayload.setEmail(email); 
 		userpayload.setPassword(password);
 		userpayload.setPhone(phonenumber);
 

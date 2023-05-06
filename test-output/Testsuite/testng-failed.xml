@@ -6,11 +6,11 @@
   </listeners>
   <test thread-count="5" name="RESTAPITest(failed)">
     <classes>
-      <class name="api.utilies.ExcelReaderDataProviderExample">
+      <class name="com.w2a.zoho.utilities.FactoApi">
         <methods>
-          <include name="createUser" invocation-numbers="0 1 2 3 4 5"/>
+          <include name="myTest" invocation-numbers="1 2 3"/>
         </methods>
-      </class> <!-- api.utilies.ExcelReaderDataProviderExample -->
+      </class> <!-- com.w2a.zoho.utilities.FactoApi -->
     </classes>
   </test> <!-- RESTAPITest(failed) -->
 </suite> <!-- Failed suite [Testsuite] -->

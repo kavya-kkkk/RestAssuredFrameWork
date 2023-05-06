@@ -24,7 +24,7 @@ public static  Response createuser(User playload)
 		.post(Routes.Posturl);
 		return response;
 	}
-	
+	 
 	
 	
 public  static Response readuser(String username)//to receive parameter
