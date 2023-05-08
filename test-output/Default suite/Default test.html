@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/3/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>1/4/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sat May 06 14:06:23 IST 2023</td>
+<td>Started on:</td><td>Mon May 08 12:45:09 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>10 seconds (10587 ms)</td>
+<tr><td>Total time:</td><td>8 seconds (8367 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,30 +76,20 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.w2a.zoho.utilities.FactoApi.myTest()'><b>myTest</b><br>Test class: com.w2a.zoho.utilities.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/insertClients, {\r\n"
-  + "             \"data\": {\r\n"
-  + "                 \"client_name\": \"kavin\",\r\n"
-  + "                 \"entity_name\": \"My New Entity3\",\r\n"
-  + "                 \"sub_category\": \"My New Subcategory3\",\r\n"
-  + "                 \"client_address\": \"My New Address3\",\r\n"
-  + "                 \"primary_contact_details\": \"909090909\",\r\n"
-  + "                 \"secondary_contact_details\": \"9999999991\",\r\n"
-  + "                 \"billing_address\": \"My New Billing Address3\",\r\n"
-  + "                 \"sla_agreement\": \"\",\r\n"
-  + "                 \"client_components\": [\r\n"
-  + "                     \"Address\"\r\n"
-  + "                 ],\r\n"
-  + "                 \"pricing\": \"900000001\"\r\n"
-  + "             }\r\n"
-  + "         }, 200.0<br/>
-<a href="#Output-1945886568" onClick='toggleBox("Output-1945886568", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.facto.restapi.FactoApi.myTest()'><b>myTest</b><br>Test class: com.facto.restapi.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/deleteClient, {\r\n"
+              + "    \"data\":\r\n"
+              + "    {\r\n"
+              + "         \"client_id\": \"e3f757db-de44-5fd2-bbf5-0a56fb50fab6\"\r\n"
+              + "    }\r\n"
+              + "}, 200.0<br/>
+<a href="#Output-1524744833" onClick='toggleBox("Output-1524744833", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1945886568" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1945886568">
-status code is =========502expected========200.0<br/>
+<a href="#Output-1524744833" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1524744833">
+status code is =========400expected========200.0<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [502]
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -107,7 +97,7 @@ status code is =========502expected========200.0<br/>
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -134,8 +124,8 @@ status code is =========502expected========200.0<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1945886568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1945886568'><pre>java.lang.AssertionError: expected [200] but found [502]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1524744833", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1524744833'><pre>java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -143,7 +133,7 @@ status code is =========502expected========200.0<br/>
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -172,22 +162,17 @@ status code is =========502expected========200.0<br/>
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.w2a.zoho.utilities.FactoApi@35e2d654</td></tr>
+<td>com.facto.restapi.FactoApi@35e2d654</td></tr>
 <tr>
-<td title='com.w2a.zoho.utilities.FactoApi.myTest()'><b>myTest</b><br>Test class: com.w2a.zoho.utilities.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/deleteClient, {\r\n"
-              + "    \"data\":\r\n"
-              + "    {\r\n"
-              + "         \"client_id\": \"88ef3ebe-e6fb-5a8a-a192-054b8354af29\"\r\n"
-              + "    }\r\n"
-              + "}, 200.0<br/>
-<a href="#Output-2137205195" onClick='toggleBox("Output-2137205195", this, "Show output", "Hide output");'>Show output</a>
+<td title='com.facto.restapi.FactoApi.myTest()'><b>myTest</b><br>Test class: com.facto.restapi.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/insertClients, {\"data\":{\"client_name\":\"kkk\",\"entity_name\":\"MyNewEntity3\",\"sub_category\":\"MyNewSubcategory3\",\"client_address\":\"MyNewAddress3\",\"primary_contact_details\":\"909090909\",\"secondary_contact_details\":\"9999999991\",\"billing_address\":\"MyNewBillingAddress3\",\"sla_agreement\":\"\",\"client_components\":[\"Address\"],\"pricing\":\"900000001\"}}, 200.0<br/>
+<a href="#Output-1375297293" onClick='toggleBox("Output-1375297293", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-2137205195" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-2137205195">
-status code is =========502expected========200.0<br/>
+<a href="#Output-1375297293" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1375297293">
+status code is =========400expected========200.0<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [502]
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -195,7 +180,7 @@ status code is =========502expected========200.0<br/>
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -222,8 +207,8 @@ status code is =========502expected========200.0<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2137205195", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2137205195'><pre>java.lang.AssertionError: expected [200] but found [502]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1375297293", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1375297293'><pre>java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -231,7 +216,7 @@ status code is =========502expected========200.0<br/>
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -259,12 +244,95 @@ status code is =========502expected========200.0<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
-<td>com.w2a.zoho.utilities.FactoApi@35e2d654</td></tr>
+<td>0</td>
+<td>com.facto.restapi.FactoApi@35e2d654</td></tr>
 <tr>
-<td title='com.w2a.zoho.utilities.FactoApi.myTest()'><b>myTest</b><br>Test class: com.w2a.zoho.utilities.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/updateClient, {\r\n"
+<td title='com.facto.restapi.FactoApi.myTest()'><b>myTest</b><br>Test class: com.facto.restapi.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/fetchAllClients, "", 200.0<br/>
+<a href="#Output-194838923" onClick='toggleBox("Output-194838923", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-194838923" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-194838923">
+status code is =========400expected========200.0<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div><a href='#' onClick='toggleBox("stack-trace194838923", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace194838923'><pre>java.lang.AssertionError: expected [200] but found [400]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at org.testng.Assert.assertEquals(Assert.java:1428)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.facto.restapi.FactoApi@35e2d654</td></tr>
+<tr>
+<td title='com.facto.restapi.FactoApi.myTest()'><b>myTest</b><br>Test class: com.facto.restapi.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/updateClient, {\r\n"
           + "    \"data\": {\r\n"
-          + "        \"client_name\": \"Oracle24356\",\r\n"
+          + "        \"client_name\": \"vijaykumar\",\r\n"
           + "        \"entity_name\": \"My New Entity5\",\r\n"
           + "        \"sub_category\": \"My New Subcategory5\",\r\n"
           + "        \"client_address\": \"My New Address5\",\r\n"
@@ -281,14 +349,14 @@ status code is =========502expected========200.0<br/>
           + "    }\r\n"
           + "}
             , 200.0<br/>
-<a href="#Output-1043970800" onClick='toggleBox("Output-1043970800", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1759368213" onClick='toggleBox("Output-1759368213", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1043970800" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1043970800">
-status code is =========502expected========200.0<br/>
+<a href="#Output-1759368213" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1759368213">
+status code is =========400expected========200.0<br/>
 </div>
 </td>
-<td><div><pre>java.lang.AssertionError: expected [200] but found [502]
+<td><div><pre>java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -296,7 +364,7 @@ status code is =========502expected========200.0<br/>
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -323,8 +391,8 @@ status code is =========502expected========200.0<br/>
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1043970800", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1043970800'><pre>java.lang.AssertionError: expected [200] but found [502]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1759368213", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1759368213'><pre>java.lang.AssertionError: expected [200] but found [400]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
@@ -332,7 +400,7 @@ status code is =========502expected========200.0<br/>
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
 	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.w2a.zoho.utilities.FactoApi.myTest(FactoApi.java:104)
+	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -360,8 +428,8 @@ status code is =========502expected========200.0<br/>
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
-<td>com.w2a.zoho.utilities.FactoApi@35e2d654</td></tr>
+<td>0</td>
+<td>com.facto.restapi.FactoApi@35e2d654</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -372,22 +440,10 @@ status code is =========502expected========200.0<br/>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.w2a.zoho.utilities.FactoApi.LoginjwtToken()'><b>LoginjwtToken</b><br>Test class: com.w2a.zoho.utilities.FactoApi</td>
+<td title='com.facto.restapi.FactoApi.LoginjwtToken()'><b>LoginjwtToken</b><br>Test class: com.facto.restapi.FactoApi</td>
 <td></td>
 <td>5</td>
-<td>com.w2a.zoho.utilities.FactoApi@35e2d654</td></tr>
-<tr>
-<td title='com.w2a.zoho.utilities.FactoApi.myTest()'><b>myTest</b><br>Test class: com.w2a.zoho.utilities.FactoApi<br>Parameters: post, https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/fetchAllClients, "", 200.0<br/>
-<a href="#Output-1556841942" onClick='toggleBox("Output-1556841942", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1556841942" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1556841942">
-status code is =========200expected========200.0<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>com.w2a.zoho.utilities.FactoApi@35e2d654</td></tr>
+<td>com.facto.restapi.FactoApi@35e2d654</td></tr>
 </table><p>
 </body>
 </html>

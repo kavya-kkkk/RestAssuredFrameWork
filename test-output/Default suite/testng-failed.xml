@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.w2a.zoho.utilities.FactoApi">
+      <class name="com.facto.restapi.FactoApi">
         <methods>
-          <include name="myTest" invocation-numbers="1 2 3"/>
+          <include name="myTest" invocation-numbers="0 1 2 3"/>
         </methods>
-      </class> <!-- com.w2a.zoho.utilities.FactoApi -->
+      </class> <!-- com.facto.restapi.FactoApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
