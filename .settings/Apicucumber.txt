@@ -1,0 +1,72 @@
+
+	@Given("I send a POST request with the following data from the {string} and {int}")
+	public void i_send_a_post_request_with_the_following_data_from_the_and(String sheetname, Integer RowNumber) throws InvalidFormatException, IOException {
+		ExcelReader reader = new ExcelReader();
+		List<Map<String,String>> testData = 
+				reader.getData("C:\\Users\\desktop\\eclipse\\CucumberRestApi\\FactoApi\\Cucumberdata.xlsx", sheetname);
+		
+	         this.Method = testData.get(RowNumber).get("Method");
+			  this.EndPoint = testData.get(RowNumber).get("EndPoint");	
+		     this. Payload  = testData.get(RowNumber).get("Payload ");
+			//this. ExceptedstatusCode = testData.get(RowNumber).get("URL");
+			this.ExpectedResposeBody = testData.get(RowNumber).get("ExpectedResposeBody");
+		   this. Expectedheader = testData.get(RowNumber).get("Expectedheader");
+		  
+	 
+		
+	}
+	@When("pass the Url")
+	public void pass_the_url() {
+
+	Apiresponse=RestAssured.given()
+
+		.baseUri("https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing")
+		.contentType(ContentType.JSON).body(Payload)
+
+		.when()
+
+		.post(EndPoint)
+
+		.then()
+
+		.extract()
+
+		.response();
+	}
+	@When("validate status code")
+	public void i_send_endpoint() {
+	int ActualStatusCode = Apiresponse.getStatusCode();
+	//	int ExpectedStatusCode = (int) ExpectedStatusCode;
+		
+		Reporter.log("Actual status code is " + "=>" + ActualStatusCode + "=>" + "-AND-" + "expected status code"
+				+ "=>" + ExceptedstatusCode);
+		Assert.assertEquals(ActualStatusCode, ExceptedstatusCode, "Expected status code is  Incorrect");
+	}
+
+	@When("validate responsebody")
+	public void i_send_the_payload() {
+		String ActualResponseBody = Apiresponse.getBody().asString();
+		
+		Reporter.log("Actual Response body" + " =>" + ActualResponseBody + "=>" + "Expected Response Body is" + "=>"
+				+ ExpectedResposeBody);
+		Assert.assertEquals(ActualResponseBody.contains(ExpectedResposeBody), true, "Incorrect Expeted body");
+	}
+
+	@Then("validate headers")
+	public void i_send_excepted_status_code() {
+		String ActualHeaderContentType = Apiresponse.header("Content-Type");
+		// To print headers ActualHeaderContentType
+					Reporter.log("Actual Response body" + " =>" + ActualHeaderContentType + "=>" + "Expected Response Body is"
+							+ "=>" + Expectedheader);
+					Assert.assertEquals(ActualHeaderContentType.contains(Expectedheader), true,
+							"Incorrect  Expected Header ContentType");
+	}
+
+
+
+}
+
+
+
+
+

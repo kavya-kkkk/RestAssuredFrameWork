@@ -1,0 +1,21 @@
+@FunctionalTestCases
+  Scenario Outline: To check that Login Rest Apis by give  both positive and negative login cradentials
+    Given I send a POST request with the following data from the "<SheetName>" and <RowNumber>
+    And I  send a post  request by giving  baseurl,endpoint and payload
+    When I validate the  response body 
+    And I validate the status code
+    And I validate the header content type
+    Then I validate the login  Rest Api's 
+
+
+
+
+
+
+  
+ 
+
+    Examples: 
+      | name  | value | status  |
+      | name1 |     5 | success |
+      | name2 |     7 | Fail    |

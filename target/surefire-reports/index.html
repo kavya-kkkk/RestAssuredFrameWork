@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <br/>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" panel-name="suite-Testsuite" class="navigator-link">
+              <span class="suite-name border-failed">Testsuite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" panel-name="test-xml-Testsuite" class="navigator-link ">
+                    <span>C:\Users\desktop\eclipse\RestAssured\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="testlist-Testsuite" class="navigator-link ">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="group-Testsuite" class="navigator-link ">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="times-Testsuite" class="navigator-link ">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="reporter-Testsuite" class="navigator-link ">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="ignored-methods-Testsuite" class="navigator-link ">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" panel-name="chronological-Testsuite" class="navigator-link ">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">8 methods, 2 failed,   6 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Testsuite" class="hide-methods failed suite-Testsuite"> (hide)</a> <!-- hide-methods failed suite-Testsuite -->
+                      <a href="#" panel-name="suite-Testsuite" class="show-methods failed suite-Testsuite"> (show)</a> <!-- show-methods failed suite-Testsuite -->
+                    </span>
+                    <div class="method-list-content failed suite-Testsuite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations">RestApiLoginValidations</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+    
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;A...)">RestApiLoginValidations(post, /v1/login, {
+    
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "A...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Testsuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Testsuite" class="hide-methods passed suite-Testsuite"> (hide)</a> <!-- hide-methods passed suite-Testsuite -->
+                      <a href="#" panel-name="suite-Testsuite" class="show-methods passed suite-Testsuite"> (show)</a> <!-- show-methods passed suite-Testsuite -->
+                    </span>
+                    <div class="method-list-content passed suite-Testsuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_pass...)">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+   
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;An...)">RestApiLoginValidations(post, /v1/login, {
+   
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "An...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;&quot;&quot;user_pa...)">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        """user_pa...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;:...)">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user": "anish.reddy@rhibhus.com",
+        "user_password":...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_pass...)">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Testsuite" title="com.api.FTValidations.LoginFTValidations" class="method navigator-link" hash-for-method="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhucom&quot;,
+        &quot;user_passwo...)">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhucom",
+        "user_passwo...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Testsuite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Testsuite" class="panel Testsuite">
+          <div class="suite-Testsuite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.api.FTValidations.LoginFTValidations</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations">
+                  </a> <!-- RestApiLoginValidations -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <div class="stack-trace">org.testng.internal.reflect.MethodMatcherException: 
+[public void com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(java.lang.String,java.lang.String,java.lang.String,double,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: RestApiLoginValidations([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, double arg3, java.lang.String arg4, java.lang.String arg5])
+Arguments: [null,null,null,null]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+    
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;A...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+    
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "A...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+    
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    
+},400.0,Cannot read property 'user_email' of undefined,application/json; charset=utf-8)</span>
+                  <div class="stack-trace">java.lang.AssertionError: Expected status code is  Incorrect expected [400] but found [500]
+	at com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(LoginFTValidations.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testsuite-class-failed -->
+          <div class="suite-Testsuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.api.FTValidations.LoginFTValidations</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_pass...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish"
+    }
+},400.0,Invalid Password,application/json; charset=utf-8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+   
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;An...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+   
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "An...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+   
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    }
+},400.0,Unexpected token } in JSON at position,application/json; charset=utf-8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;&quot;&quot;user_pa...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        """user_pa...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        """user_password""": "Anish@123"
+    }
+},400.0,Unexpected string in JSON at position,application/json; charset=utf-8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;:...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user": "anish.reddy@rhibhus.com",
+        "user_password":...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+    "data": {
+        "user": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    }
+},502.0,Internal server error,application/json)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_pass...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    }
+},200.0,eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.,application/json; charset=utf-8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RestApiLoginValidations(post, /v1/login, {
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhucom&quot;,
+        &quot;user_passwo...)">
+                  </a> <!-- RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhucom",
+        "user_passwo...) -->
+                  <span class="method-name">RestApiLoginValidations</span>
+                  <span class="parameters">(post,/v1/login,{
+    "data": {
+        "user_email": "anish.reddy@rhibhucom",
+        "user_password": "Anish@123"
+    }
+},400.0,User Email Doesn't Exists,application/json; charset=utf-8)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Testsuite-class-passed -->
+        </div> <!-- panel Testsuite -->
+        <div panel-name="test-xml-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\desktop\eclipse\RestAssured\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;Testsuite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;com.extent.report.ExtendReportManager&quot;/&gt;
+  &lt;/listeners&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;RESTAPITest&quot; verbose=&quot;0&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.api.FTValidations.LoginFTValidations&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- RESTAPITest --&gt;
+&lt;/suite&gt; &lt;!-- Testsuite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Testsuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">RESTAPITest (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Testsuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Testsuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Testsuite');
+function tableData_Testsuite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(8);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'RestApiLoginValidations')
+data.setCell(0, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(0, 3, 5767);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'RestApiLoginValidations')
+data.setCell(1, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(1, 3, 3344);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'RestApiLoginValidations')
+data.setCell(2, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(2, 3, 150);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'RestApiLoginValidations')
+data.setCell(3, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(3, 3, 140);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'RestApiLoginValidations')
+data.setCell(4, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(4, 3, 137);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'RestApiLoginValidations')
+data.setCell(5, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(5, 3, 123);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'RestApiLoginValidations')
+data.setCell(6, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(6, 3, 121);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'RestApiLoginValidations')
+data.setCell(7, 2, 'com.api.FTValidations.LoginFTValidations')
+data.setCell(7, 3, 112);
+window.suiteTableData['Testsuite']= { tableData: data, tableDiv: 'times-div-Testsuite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <div id="times-div-Testsuite">
+              </div> <!-- times-div-Testsuite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Testsuite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>400=>-AND-expected status code=>400</span>
+                <span class="reporter-method-output">Actual Response body =>"Invalid Password"=>Expected Response Body is=>Invalid Password</span>
+                <span class="reporter-method-output">Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+   
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "An...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>400=>-AND-expected status code=>400</span>
+                <span class="reporter-method-output">Actual Response body =>"Unexpected token } in JSON at position 98"=>Expected Response Body is=>Unexpected token } in JSON at position</span>
+                <span class="reporter-method-output">Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        """user_pa...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>400=>-AND-expected status code=>400</span>
+                <span class="reporter-method-output">Actual Response body =>"Unexpected string in JSON at position 75"=>Expected Response Body is=>Unexpected string in JSON at position</span>
+                <span class="reporter-method-output">Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user": "anish.reddy@rhibhus.com",
+        "user_password":...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>502=>-AND-expected status code=>502</span>
+                <span class="reporter-method-output">Actual Response body =>{"message": "Internal server error"}=>Expected Response Body is=>Internal server error</span>
+                <span class="reporter-method-output">Actual Response body =>application/json=>Expected Response Body is=>application/json</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>200=>-AND-expected status code=>200</span>
+                <span class="reporter-method-output">Actual Response body =>[{"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2MyMWM4YzEtM2VlMC01MGViLThlMDItNGRhZWExYjQ4YzEyIiwidXNlcl9jYXRlZ29yeSI6IkFkbWluIiwidXNlcl9jbGllbnRfaWQiOiJOLkEuIiwidXNlcl90eXBlIjoiTi5BLiIsImlhdCI6MTY4NDI5OTc5MH0.GyU__RtEIDdhIfgTN64dTxiH1Y-xAQFa1WXL0mditBQ"}]=>Expected Response Body is=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.</span>
+                <span class="reporter-method-output">Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhucom",
+        "user_passwo...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>400=>-AND-expected status code=>400</span>
+                <span class="reporter-method-output">Actual Response body =>"User Email Doesn't Exists"=>Expected Response Body is=>User Email Doesn't Exists</span>
+                <span class="reporter-method-output">Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">RestApiLoginValidations(post, /v1/login, {
+    
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "A...)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Actual status code is =>500=>-AND-expected status code=>400</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Testsuite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.api.FTValidations.LoginFTValidations</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RestApiLoginValidations</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...)</span>
+                <span class="method-start">1602 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_pass...)</span>
+                <span class="method-start">4962 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhucom",
+        "user_passwo...)</span>
+                <span class="method-start">5104 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+   
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "An...)</span>
+                <span class="method-start">5243 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        """user_pa...)</span>
+                <span class="method-start">5368 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+    
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "A...)</span>
+                <span class="method-start">5482 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">RestApiLoginValidations(post, /v1/login, {
+    "data": {
+        "user": "anish.reddy@rhibhus.com",
+        "user_password":...)</span>
+                <span class="method-start">5614 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
+</html>

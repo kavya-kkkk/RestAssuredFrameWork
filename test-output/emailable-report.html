@@ -9,26 +9,56 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">4</td><td class="num">8,367</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">18,092</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">com.facto.restapi.FactoApi</td><td><a href="#m0">myTest</a></td><td rowspan="4">1683530117786</td><td rowspan="4">189</td></tr><tr class="failedeven"><td><a href="#m1">myTest</a></td></tr><tr class="failedeven"><td><a href="#m2">myTest</a></td></tr><tr class="failedeven"><td><a href="#m3">myTest</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.facto.restapi.FactoApi</td><td><a href="#m4">LoginjwtToken</a></td><td rowspan="1">1683530109698</td><td rowspan="1">5560</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.api.FTValidations.LoginFTValidations</td><td><a href="#m0">RestApiLoginValidations</a></td><td rowspan="2">1684225574201</td><td rowspan="2">17601</td></tr><tr class="failedeven"><td><a href="#m1">RestApiLoginValidations</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">com.api.FTValidations.LoginFTValidations</td><td><a href="#m2">RestApiLoginValidations</a></td><td rowspan="6">1684225580800</td><td rowspan="6">9951</td></tr><tr class="passedeven"><td><a href="#m3">RestApiLoginValidations</a></td></tr><tr class="passedeven"><td><a href="#m4">RestApiLoginValidations</a></td></tr><tr class="passedeven"><td><a href="#m5">RestApiLoginValidations</a></td></tr><tr class="passedeven"><td><a href="#m6">RestApiLoginValidations</a></td></tr><tr class="passedeven"><td><a href="#m7">RestApiLoginValidations</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.facto.restapi.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/deleteClient</td><td>{\r\n&quot;
-              + &quot;    \&quot;data\&quot;:\r\n&quot;
-              + &quot;    {\r\n&quot;
-              + &quot;         \&quot;client_id\&quot;: \&quot;e3f757db-de44-5fd2-bbf5-0a56fb50fab6\&quot;\r\n&quot;
-              + &quot;    }\r\n&quot;
-              + &quot;}</td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========400expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [400]
+<h2>Default test</h2><h3 id="m0">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.testng.internal.reflect.MethodMatcherException: 
+[public void com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(java.lang.String,java.lang.String,java.lang.String,double,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: RestApiLoginValidations([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, double arg3, java.lang.String arg4, java.lang.String arg5])
+Arguments: [null,null,null,null]
+	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
+	at org.testng.internal.Parameters.injectParameters(Parameters.java:909)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:37)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+    
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;Anish@123&quot;
+    
+}</td><td>400.0</td><td>Cannot read property &apos;user_email&apos; of undefined</td><td>application/json; charset=utf-8</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>500=>-AND-expected status code=>400</div></td></tr><tr><th colspan="6">Exception</th></tr><tr><td colspan="6"><div class="stacktrace">java.lang.AssertionError: Expected status code is  Incorrect expected [400] but found [500]
 	at org.testng.Assert.fail(Assert.java:110)
 	at org.testng.Assert.failNotEquals(Assert.java:1577)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
 	at org.testng.Assert.assertEquals(Assert.java:131)
 	at org.testng.Assert.assertEquals(Assert.java:1418)
 	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(LoginFTValidations.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
 	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
@@ -54,132 +84,41 @@
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.facto.restapi.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/insertClients</td><td>{\&quot;data\&quot;:{\&quot;client_name\&quot;:\&quot;kkk\&quot;,\&quot;entity_name\&quot;:\&quot;MyNewEntity3\&quot;,\&quot;sub_category\&quot;:\&quot;MyNewSubcategory3\&quot;,\&quot;client_address\&quot;:\&quot;MyNewAddress3\&quot;,\&quot;primary_contact_details\&quot;:\&quot;909090909\&quot;,\&quot;secondary_contact_details\&quot;:\&quot;9999999991\&quot;,\&quot;billing_address\&quot;:\&quot;MyNewBillingAddress3\&quot;,\&quot;sla_agreement\&quot;:\&quot;\&quot;,\&quot;client_components\&quot;:[\&quot;Address\&quot;],\&quot;pricing\&quot;:\&quot;900000001\&quot;}}</td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========400expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [400]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.facto.restapi.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/fetchAllClients</td><td>&quot;&quot;</td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========400expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [400]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.facto.restapi.FactoApi#myTest</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>post</td><td>https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/updateClient</td><td>{\r\n&quot;
-          + &quot;    \&quot;data\&quot;: {\r\n&quot;
-          + &quot;        \&quot;client_name\&quot;: \&quot;vijaykumar\&quot;,\r\n&quot;
-          + &quot;        \&quot;entity_name\&quot;: \&quot;My New Entity5\&quot;,\r\n&quot;
-          + &quot;        \&quot;sub_category\&quot;: \&quot;My New Subcategory5\&quot;,\r\n&quot;
-          + &quot;        \&quot;client_address\&quot;: \&quot;My New Address5\&quot;,\r\n&quot;
-          + &quot;        \&quot;primary_contact_details\&quot;: \&quot;9090909095\&quot;,\r\n&quot;
-          + &quot;        \&quot;secondary_contact_details\&quot;: \&quot;9999999995\&quot;,\r\n&quot;
-          + &quot;        \&quot;billing_address\&quot;: \&quot;My New Billing Address5\&quot;,\r\n&quot;
-          + &quot;        \&quot;sla_agreement\&quot;: \&quot;pak5.jpg\&quot;,\r\n&quot;
-          + &quot;        \&quot;client_components\&quot;: [\r\n&quot;
-          + &quot;            \&quot;Address\&quot;,\r\n&quot;
-          + &quot;            \&quot;Employment\&quot;\r\n&quot;
-          + &quot;        ],\r\n&quot;
-          + &quot;        \&quot;pricing\&quot;: \&quot;9000000015\&quot;,\r\n&quot;
-          + &quot;        \&quot;client_id\&quot;: \&quot;88ef3ebe-e6fb-5a8a-a192-054b8354af29\&quot;\r\n&quot;
-          + &quot;    }\r\n&quot;
-          + &quot;}
-            </td><td>200.0</td></tr><tr><th colspan="4">Messages</th></tr><tr><td colspan="4"><div class="messages">status code is =========400expected========200.0</div></td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">java.lang.AssertionError: expected [200] but found [400]
-	at org.testng.Assert.fail(Assert.java:110)
-	at org.testng.Assert.failNotEquals(Assert.java:1577)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
-	at org.testng.Assert.assertEquals(Assert.java:131)
-	at org.testng.Assert.assertEquals(Assert.java:1418)
-	at org.testng.Assert.assertEquals(Assert.java:1382)
-	at org.testng.Assert.assertEquals(Assert.java:1428)
-	at com.facto.restapi.FactoApi.myTest(FactoApi.java:110)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:829)
-	at org.testng.TestRunner.run(TestRunner.java:602)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-	at org.testng.TestNG.runSuites(TestNG.java:1099)
-	at org.testng.TestNG.run(TestNG.java:1067)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.facto.restapi.FactoApi#LoginjwtToken</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;Anish@123&quot;
+    }
+}</td><td>200.0</td><td>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.</td><td>application/json; charset=utf-8</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>200=>-AND-expected status code=>200<br/>Actual Response body =>[{"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2MyMWM4YzEtM2VlMC01MGViLThlMDItNGRhZWExYjQ4YzEyIiwidXNlcl9jYXRlZ29yeSI6IkFkbWluIiwidXNlcl9jbGllbnRfaWQiOiJOLkEuIiwidXNlcl90eXBlIjoiTi5BLiIsImlhdCI6MTY4NDIyNTU5MH0.GWvumwkbAiPE8mUKM_-0qOf_iN4fI2phoYXifGPIihM"}]=>Expected Response Body is=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.<br/>Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhucom&quot;,
+        &quot;user_password&quot;: &quot;Anish@123&quot;
+    }
+}</td><td>400.0</td><td>User Email Doesn&apos;t Exists</td><td>application/json; charset=utf-8</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>400=>-AND-expected status code=>400<br/>Actual Response body =>"User Email Doesn't Exists"=>Expected Response Body is=>User Email Doesn't Exists<br/>Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+    &quot;data&quot;: {
+        &quot;user&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;Anish@123&quot;
+    }
+}</td><td>502.0</td><td>Internal server error</td><td>application/json</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>502=>-AND-expected status code=>502<br/>Actual Response body =>{"message": "Internal server error"}=>Expected Response Body is=>Internal server error<br/>Actual Response body =>application/json=>Expected Response Body is=>application/json</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;Anish&quot;
+    }
+}</td><td>400.0</td><td>Invalid Password</td><td>application/json; charset=utf-8</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>400=>-AND-expected status code=>400<br/>Actual Response body =>"Invalid Password"=>Expected Response Body is=>Invalid Password<br/>Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+   
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;user_password&quot;: &quot;Anish@123&quot;
+    }
+}</td><td>400.0</td><td>Unexpected token } in JSON at position</td><td>application/json; charset=utf-8</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>400=>-AND-expected status code=>400<br/>Actual Response body =>"Unexpected token } in JSON at position 98"=>Expected Response Body is=>Unexpected token } in JSON at position<br/>Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">com.api.FTValidations.LoginFTValidations#RestApiLoginValidations</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th><th>Parameter #6</th></tr><tr class="param stripe"><td>post</td><td>/v1/login</td><td>{
+    &quot;data&quot;: {
+        &quot;user_email&quot;: &quot;anish.reddy@rhibhus.com&quot;,
+        &quot;&quot;&quot;user_password&quot;&quot;&quot;: &quot;Anish@123&quot;
+    }
+}</td><td>400.0</td><td>Unexpected string in JSON at position</td><td>application/json; charset=utf-8</td></tr><tr><th colspan="6">Messages</th></tr><tr><td colspan="6"><div class="messages">Actual status code is =>400=>-AND-expected status code=>400<br/>Actual Response body =>"Unexpected string in JSON at position 75"=>Expected Response Body is=>Unexpected string in JSON at position<br/>Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

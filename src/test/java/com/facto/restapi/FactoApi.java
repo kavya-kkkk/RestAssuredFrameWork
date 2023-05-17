@@ -1,5 +1,7 @@
 package com.facto.restapi;
 
+import static io.restassured.RestAssured.given;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,6 +22,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
 public class FactoApi {
@@ -72,13 +75,13 @@ public class FactoApi {
 	
 
    
-    @Test(priority = 1)
+   /* @Test(priority = 1)
 	public void LoginjwtToken() {
 
 		String payload = "{ \"data\": { \"user_email\": \"anish.reddy@rhibhus.com\", \"user_password\": \"Anish@123\" } }";
 
-		Response response = RestAssured.given().contentType(ContentType.JSON).body(payload)
-				.post("https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing/v1/login");
+		Response response = RestAssured.given().log().all().contentType(ContentType.JSON).body(payload)
+				.post("/v1/login");
 
 		System.out.println("Response body: " + response.getBody().asString());
 		System.out.println("Status code: " + response.getStatusCode());
@@ -89,16 +92,74 @@ public class FactoApi {
 		//System.out.println(stringlength);
 		jsontoken = jwttoken.substring(9, stringlength - 3);
 		System.out.println(jsontoken);
-	}
+	}*/
     
     
 @Test(dataProvider = "excelData",priority=2)
-public void myTest(String Method, String URL, String payload,double Expectedstatuscode) {
-	Response response = RestAssured.given()
-			.header("Content-Type", "application/json")
-            . header("Authorization", jsontoken)
+public void myTest(String Method, String EndPoint , String payload,double Expectedstatuscode) {
+	
+	
+	String jsontoken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2MyMWM4YzEtM2VlMC01MGViLThlMDItNGRhZWExYjQ4YzEyIiwidXNlcl9jYXRlZ29yeSI6IkFkbWluIiwidXNlcl9jbGllbnRfaWQiOiJOLkEuIiwidXNlcl90eXBlIjoiTi5BLiIsImlhdCI6MTY4MzYxMTcxOX0.NJaJANpn1aYY7OX99LFWZQNo3jHDI9mRC3PDcIaprd8";
+    // Set base URI
+   // Define request payload
+   // String requestBody = "";
+    
+    
+    // Send POST request
+    Response response = given()
+    		.baseUri("https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing")  
+    		. header("Authorization", jsontoken)
+            .contentType(ContentType.JSON)
             .body(payload)
-            .post(URL);
+            .post(EndPoint);
+    // Print response body
+    
+    String responseBody = response.getBody().asString();
+    
+    System.out.println("Response body: " + responseBody);
+    // Print response status code
+   
+    int Actualstatuscode = response.getStatusCode();
+	int statuscode = (int) Expectedstatuscode;
+   
+    
+    System.out.println("header token -----------------" + jsontoken);
+	//String expectedresponsebody = Expectedresbody;
+	
+	Reporter.log("status code is =========" + Actualstatuscode + "expected========" + Expectedstatuscode);
+	Assert.assertEquals(Actualstatuscode,statuscode);
+	
+	//String responseBody = response.getBody().asString();
+     
+    
+
+}
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	/*String jsontoken="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2MyMWM4YzEtM2VlMC01MGViLThlMDItNGRhZWExYjQ4YzEyIiwidXNlcl9jYXRlZ29yeSI6IkFkbWluIiwidXNlcl9jbGllbnRfaWQiOiJOLkEuIiwidXNlcl90eXBlIjoiTi5BLiIsImlhdCI6MTY4MzYxMTcxOX0.NJaJANpn1aYY7OX99LFWZQNo3jHDI9mRC3PDcIaprd8";
+	Response response = RestAssured.given().log().all()
+			.baseUri("https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing")
+			//.header("Content-Type", "application/json")
+            . header("Authorization", jsontoken)
+            .contentType(ContentType.JSON)
+            .body(payload)
+            .post(EndPoint);
 	
 	
 	System.out.println("payload" + payload);
@@ -109,6 +170,11 @@ public void myTest(String Method, String URL, String payload,double Expectedstat
 	Reporter.log("status code is =========" + Actualstatuscode + "expected========" + Expectedstatuscode);
 	Assert.assertEquals(Actualstatuscode, statuscode);
 	String actualresponsebody = response.getBody().asString();
+	String responseBody = response.getBody().asString();
+	JsonPath jsonPath = new JsonPath(responseBody);
+
+	String errorMessage = jsonPath.get("error.message");
+	System.out.println("Error message: " + errorMessage);
 	
 	System.out.println("Response body: ===============" +actualresponsebody);
 	
@@ -117,6 +183,7 @@ public void myTest(String Method, String URL, String payload,double Expectedstat
 
 }
 
-}
+
+}*/
 
 

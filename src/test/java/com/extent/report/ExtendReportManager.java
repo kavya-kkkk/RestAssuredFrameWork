@@ -27,10 +27,10 @@ repName="Test-Report - "+timeStamp+".html";
 sparkReporter = new ExtentSparkReporter (".\\reports\\"+repName); //specify location of the report
 sparkReporter.config().setDocumentTitle("RestAssuredAutomation Project"); // Title of report.
 sparkReporter.config().setReportName("Pet Store Users API"); // name of the report
-sparkReporter.config().setTheme (Theme.DARK);
+sparkReporter.config().setTheme (Theme.STANDARD);
 extent=new ExtentReports();
 extent.attachReporter (sparkReporter);
-extent.setSystemInfo("Application", "Pest Store Users API");
+extent.setSystemInfo("Application", "Facto API");
 extent.setSystemInfo("Operating System", System.getProperty("os.name"));
 extent.setSystemInfo("User Name", System.getProperty("user.name")); 
 extent.setSystemInfo("Environemnt", "QA");

@@ -1,0 +1,6 @@
+1.After Login ,the sign up button "Sign up" text is not aligned properly 
+2.When we click on raffles logo on thhe hearder part,which not navigating to home page
+3.After login,which showing your are a winner and you have  4 active raffles and you have 4 points 
+4.After Login , when we click on signup button ,In sign up page country drop is not showing country list of country name  and code
+5.there is no validation for phonenumber text feilds both county code and phonenumber
+6.After Login ,when we are try to log in or signup , we are not able to login by using different credential and signup

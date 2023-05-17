@@ -1,0 +1,306 @@
+<html>
+<head>
+<title>TestNG:  RESTAPITest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>RESTAPITest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>6/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 17 10:33:05 IST 2023</td>
+</tr>
+<tr><td>Total time:</td><td>6 seconds (6229 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations</td>
+<td><div><pre>org.testng.internal.reflect.MethodMatcherException: 
+[public void com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(java.lang.String,java.lang.String,java.lang.String,double,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: RestApiLoginValidations([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, double arg3, java.lang.String arg4, java.lang.String arg5])
+Arguments: [null,null,null,null]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace173321452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace173321452'><pre>org.testng.internal.reflect.MethodMatcherException: 
+[public void com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(java.lang.String,java.lang.String,java.lang.String,double,java.lang.String,java.lang.String)] has no parameters defined but was found to be using a data provider (either explicitly specified or inherited from class level annotation).
+Data provider mismatch
+Method: RestApiLoginValidations([java.lang.String arg0, java.lang.String arg1, java.lang.String arg2, double arg3, java.lang.String arg4, java.lang.String arg5])
+Arguments: [null,null,null,null]
+	at org.testng.internal.reflect.DataProviderMethodMatcher.getConformingArguments(DataProviderMethodMatcher.java:46)
+	at org.testng.internal.Parameters.injectParameters(Parameters.java:909)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:37)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>5</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+    
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    
+}, 400.0, Cannot read property 'user_email' of undefined, application/json; charset=utf-8<br/>
+<a href="#Output-1947060963" onClick='toggleBox("Output-1947060963", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1947060963" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1947060963">
+Actual status code is =>500=>-AND-expected status code=>400<br/>
+</div>
+</td>
+<td><div><pre>java.lang.AssertionError: Expected status code is  Incorrect expected [400] but found [500]
+	at com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(LoginFTValidations.java:59)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1947060963", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1947060963'><pre>java.lang.AssertionError: Expected status code is  Incorrect expected [400] but found [500]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1577)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:1418)
+	at org.testng.Assert.assertEquals(Assert.java:1382)
+	at com.api.FTValidations.LoginFTValidations.RestApiLoginValidations(LoginFTValidations.java:59)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:829)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+	at org.testng.TestNG.runSuites(TestNG.java:1099)
+	at org.testng.TestNG.run(TestNG.java:1067)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:295)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:84)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:90)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:203)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:155)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:103)
+</pre></div></td>
+<td>0</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish"
+    }
+}, 400.0, Invalid Password, application/json; charset=utf-8<br/>
+<a href="#Output-2106390956" onClick='toggleBox("Output-2106390956", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2106390956" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2106390956">
+Actual status code is =>400=>-AND-expected status code=>400<br/>
+Actual Response body =>"Invalid Password"=>Expected Response Body is=>Invalid Password<br/>
+Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+   
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    }
+}, 400.0, Unexpected token } in JSON at position, application/json; charset=utf-8<br/>
+<a href="#Output-786058987" onClick='toggleBox("Output-786058987", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-786058987" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-786058987">
+Actual status code is =>400=>-AND-expected status code=>400<br/>
+Actual Response body =>"Unexpected token } in JSON at position 98"=>Expected Response Body is=>Unexpected token } in JSON at position<br/>
+Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        """user_password""": "Anish@123"
+    }
+}, 400.0, Unexpected string in JSON at position, application/json; charset=utf-8<br/>
+<a href="#Output-458736453" onClick='toggleBox("Output-458736453", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-458736453" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-458736453">
+Actual status code is =>400=>-AND-expected status code=>400<br/>
+Actual Response body =>"Unexpected string in JSON at position 75"=>Expected Response Body is=>Unexpected string in JSON at position<br/>
+Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+    "data": {
+        "user": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    }
+}, 502.0, Internal server error, application/json<br/>
+<a href="#Output-1358820431" onClick='toggleBox("Output-1358820431", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1358820431" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1358820431">
+Actual status code is =>502=>-AND-expected status code=>502<br/>
+Actual Response body =>{"message": "Internal server error"}=>Expected Response Body is=>Internal server error<br/>
+Actual Response body =>application/json=>Expected Response Body is=>application/json<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhus.com",
+        "user_password": "Anish@123"
+    }
+}, 200.0, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9., application/json; charset=utf-8<br/>
+<a href="#Output-565077371" onClick='toggleBox("Output-565077371", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-565077371" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-565077371">
+Actual status code is =>200=>-AND-expected status code=>200<br/>
+Actual Response body =>[{"jwt":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiN2MyMWM4YzEtM2VlMC01MGViLThlMDItNGRhZWExYjQ4YzEyIiwidXNlcl9jYXRlZ29yeSI6IkFkbWluIiwidXNlcl9jbGllbnRfaWQiOiJOLkEuIiwidXNlcl90eXBlIjoiTi5BLiIsImlhdCI6MTY4NDI5OTc5MH0.GyU__RtEIDdhIfgTN64dTxiH1Y-xAQFa1WXL0mditBQ"}]=>Expected Response Body is=>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.<br/>
+Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+<tr>
+<td title='com.api.FTValidations.LoginFTValidations.RestApiLoginValidations()'><b>RestApiLoginValidations</b><br>Test class: com.api.FTValidations.LoginFTValidations<br>Parameters: post, /v1/login, {
+    "data": {
+        "user_email": "anish.reddy@rhibhucom",
+        "user_password": "Anish@123"
+    }
+}, 400.0, User Email Doesn't Exists, application/json; charset=utf-8<br/>
+<a href="#Output-1017838183" onClick='toggleBox("Output-1017838183", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1017838183" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1017838183">
+Actual status code is =>400=>-AND-expected status code=>400<br/>
+Actual Response body =>"User Email Doesn't Exists"=>Expected Response Body is=>User Email Doesn't Exists<br/>
+Actual Response body =>application/json; charset=utf-8=>Expected Response Body is=>application/json; charset=utf-8<br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>com.api.FTValidations.LoginFTValidations@15761df8</td></tr>
+</table><p>
+</body>
+</html>
