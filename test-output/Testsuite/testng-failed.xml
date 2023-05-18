@@ -2,15 +2,15 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Testsuite]" guice-stage="DEVELOPMENT">
   <listeners>
-    <listener class-name="com.extent.report.ExtendReportManager"/>
+    <listener class-name="api.utilies.ExtendReportManager"/>
   </listeners>
   <test thread-count="5" name="RESTAPITest(failed)">
     <classes>
-      <class name="com.api.FTValidations.LoginFTValidations">
+      <class name="com.w2a.zoho.utilities.FactoApi">
         <methods>
-          <include name="RestApiLoginValidations"/>
+          <include name="myTest" invocation-numbers="1 2 3"/>
         </methods>
-      </class> <!-- com.api.FTValidations.LoginFTValidations -->
+      </class> <!-- com.w2a.zoho.utilities.FactoApi -->
     </classes>
   </test> <!-- RESTAPITest(failed) -->
 </suite> <!-- Failed suite [Testsuite] -->

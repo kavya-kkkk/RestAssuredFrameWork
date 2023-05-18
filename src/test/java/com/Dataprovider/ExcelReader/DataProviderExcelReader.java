@@ -29,7 +29,9 @@ public class DataProviderExcelReader {
 	        for (int i = 1; i <= rowCount; i++) { // start from second row
 	            Row row = sheet.getRow(i);
 	            Object[] rowValues = new Object[row.getLastCellNum()];
-	            for (int j = 0; j < row.getLastCellNum(); j++) {
+	            for (int j = 0; j < row.getLastCellNum(); j++) 
+	            
+	            {
 	                Cell cell = row.getCell(j, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
 	              //  System.out.println("cell============"+cell);
 	                
@@ -39,8 +41,12 @@ public class DataProviderExcelReader {
 	                    rowValues[j] = null;
 	                }
 	            }
-	            data.add(rowValues);
+	            
+	         data.add(rowValues);
 	        }
+	        
+	        
+	        
 	        return data.toArray(new Object[0][0]);
 	    }
 

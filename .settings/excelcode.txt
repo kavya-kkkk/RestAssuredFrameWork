@@ -1,0 +1,369 @@
+Automated Rest Assured API functional testing covers the folowing:
+Works testing different API's with different methods (spreadsheet upload) at the same time coverig all positive and negative scenarios 
+1. Response Status code
+2. Response Body
+3. Response Header
+4. Report generation (TestNG and Extent)
+
+
+
+
+
+
+
+public static void main(String[] args) {
+        String filePath ="C:\\Users\\desktop\\eclipse\\PracticeRestAPi\\src\\test\\resources\\Api-ValidationPN\\LoginApiSheets.xlsx";
+
+        try (FileInputStream fis = new FileInputStream(filePath);
+             Workbook workbook = WorkbookFactory.create(fis)) {
+
+            processWorkbook(workbook);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static void processWorkbook(Workbook workbook) {
+        int numberOfSheets = workbook.getNumberOfSheets();
+        for (int i = 0; i < numberOfSheets; i++) {
+            Sheet sheet = workbook.getSheetAt(i);
+            String sheetname = sheet.getSheetName();
+            System.out.println("Sheet Name: "+ sheetname);
+            
+            if (sheetname.equals("factoA"))
+            {
+            for (Row row : sheet) {
+                for (Cell cell : row) {
+                    String cellValue = getCellValue(cell);
+                    System.out.print(cellValue + "\t");
+                }
+               // System.out.println();
+            }
+           // System.out.println();
+            
+            }
+            
+         /*   else if (sheetname.equals("factoB"))
+            {
+            for (Row row : sheet) {
+                for (Cell cell : row) {
+                    String cellValue = getCellValue(cell);
+                    System.out.print(cellValue + "\t");
+                }
+            }}*/
+           /* else if (sheetname.equals("factoC"))
+            {
+            for (Row row : sheet) {
+                for (Cell cell : row) {
+                    String cellValue = getCellValue(cell);
+                    System.out.print(cellValue + "\t");
+                }
+            }}*/
+            
+            
+            
+            }
+      
+           // System.out.println();
+        }
+       // System.out.println();
+        
+        
+        
+        
+    private static String getCellValue(Cell cell) {
+        String cellValue;
+        switch (cell.getCellType()) {
+            case STRING:
+                cellValue = cell.getStringCellValue();
+                break;
+            case NUMERIC:
+                cellValue = String.valueOf(cell.getNumericCellValue());
+                break;
+            case BOOLEAN:
+                cellValue = String.valueOf(cell.getBooleanCellValue());
+                break;
+            case FORMULA:
+                cellValue = cell.getCellFormula();
+                break;
+            default:
+                cellValue = "";
+        }
+        return cellValue;
+    }
+}
+	
+	
+	/*private static final String FILE_NAME = "C:\\Users\\desktop\\eclipse\\PracticeRestAPi\\testdata\\project.xlsx";
+  //  private static final String SHEET_NAME = "factoA";
+	
+   @DataProvider(name = "RestApi")
+
+   public static Object[][] readExcelData(String[] sheetNames, int startRow, int numRows) throws IOException {
+        List<Object[]> data = new ArrayList<>();
+        File file = new File(FILE_NAME);
+        FileInputStream inputStream = new FileInputStream(file);
+        Workbook workbook = WorkbookFactory.create(inputStream);
+      //  Sheet sheet = workbook.getSheet(sheetName);
+      //  int rowCount = sheet.getLastRowNum();
+        for (String sheetName : sheetNames) {
+            Sheet sheet = workbook.getSheet(sheetName);
+            int rowCount = sheet.getLastRowNum();
+        for (int i = startRow; i < startRow + numRows; i++) {
+            Row row = sheet.getRow(i);
+            Object[] rowValues = new Object[row.getLastCellNum()];
+            for (int j = 0; j < row.getLastCellNum(); j++) {
+                Cell cell = row.getCell(j, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
+                if (cell != null) {
+                    rowValues[j] = getCellValue(cell);
+                } else {
+                    rowValues[j] = null;
+                }
+            }
+            data.add(rowValues);
+        }
+
+        
+    }
+        return data.toArray(new Object[data.size()][0]);
+   }
+	/* @DataProvider(name = "RestApi")
+    public static Object[][] readExcelData(String[] sheetNames, int startRow, int numRows) throws IOException {
+        List<Object[]> data = new ArrayList<>();
+        File file = new File(FILE_NAME);
+        FileInputStream inputStream = new FileInputStream(file);
+        Workbook workbook = WorkbookFactory.create(inputStream);
+
+        for (String sheetName : sheetNames) {
+            Sheet sheet = workbook.getSheet(sheetName);
+            int rowCount = sheet.getLastRowNum();
+
+            for (int i = startRow; i < startRow + numRows; i++) {
+                Row row = sheet.getRow(i);
+                Object[] rowValues = new Object[row.getLastCellNum()];
+                for (int j = 0; j < row.getLastCellNum(); j++) {
+                    Cell cell = row.getCell(j, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
+                    if (cell != null) {
+                        rowValues[j] = getCellValue(cell);
+                    } else {
+                        rowValues[j] = null;
+                    }
+                }
+                data.add(rowValues);
+            }
+        }
+
+        return data.toArray(new Object[data.size()][0]);
+    }
+*/
+
+ /*   private static Object getCellValue(Cell cell) {
+        CellType cellType = cell.getCellType();
+        switch (cellType) {
+            case BOOLEAN:
+                return cell.getBooleanCellValue();
+            case NUMERIC:
+                return cell.getNumericCellValue();
+            case STRING:
+                return cell.getStringCellValue();
+            default:
+                return null;
+        }
+    }
+    
+   
+    
+    @Test
+    public void testDataReadingFromExcel() throws IOException {
+    	String[] sheetNames = {"Facto", "UpSchool", "Raffolux"};
+        Object[][] data = com.Dataprovider.ExcelReader.DataProviderExcelReader.readExcelData(sheetNames, 2, 5);
+      //  Object[][] data2 = com.Dataprovider.ExcelReader.DataProviderExcelReader.readExcelData("factoA", 2, 5);
+        // Store the data cell-wise
+        
+        int numRows = data.length;
+        int numCols = data[0].length;
+        Object[][] cellData = new Object[numRows][numCols];
+
+        for (int i = 0; i < numRows; i++) {
+            for (int j = 0; j < numCols; j++) {
+                cellData[i][j] = data[i][j];
+            }
+        }
+
+        // Access and store the data row-wise
+        List<String> rowData = new ArrayList<>();
+        for (int i = 0; i < numRows; i++) {
+            String rowValue = "";
+            for (int j = 0; j < numCols; j++) {
+                rowValue += cellData[i][j] + " ";
+            }
+            rowData.add(rowValue.trim());
+        }
+
+        // Print the stored data
+        for (String row : rowData) {
+            System.out.println(row);
+        }
+
+        // Example of reusing the stored data
+        for (String row : rowData) {
+            // Access each value in the row
+            String[] values = row.split("");
+            String Method = values[0]; 
+            System.out.println("method name is :"+ Method);
+            String EndPoint = values[1];
+            System.out.println("endpoint is :"+ EndPoint);
+            
+            /*String Method = values[0]; 
+            System.out.println("method name is :"+ Method);
+            String EndPoint = values[1];
+            System.out.println("endpoint is :"+ EndPoint);
+            String Payload = values[2];
+            System.out.println("payload is :"+ Payload);
+            String ExpectedStatusCodeDouble = values[3];
+            System.out.println("exp status code  is :"+ ExpectedStatusCodeDouble);
+            String ExpectedResponseBody = values[4];
+            System.out.println("exp res body is :"+ExpectedResponseBody);
+            String ExpectedHeaderContentType= values[5];
+    
+            System.out.println("exp header is  :"+ExpectedHeaderContentType);*/
+            
+   /* System.out.println();
+            System.out.println("next sheet");
+        }
+        
+    }
+*/
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   /* @Test
+    public void testDataReadingFromExcel() throws IOException {
+        Object[][] data = com.Dataprovider.ExcelReader.DataProviderExcelReader.readExcelData("factoA", 1, 5);
+        for (int i = 0; i < data.length; i++) {
+            for (int j = 0; j < data[i].length; j++) {
+                System.out.print(data[i][j] + " ");
+            }
+            System.out.println();
+        }
+     
+    }*/
+	
+
+	/*@Test(dataProvider = "RestApi", dataProviderClass = DataProviderExcelReader.class)
+	public void RestApiLoginValidations(String Method, String EndPoint, String Payload, double ExpectedStatusCodeDouble,
+			String ExpectedResponseBody, String ExpectedHeaderContentType) throws IOException {
+	
+	    Object[][] data = com.Dataprovider.ExcelReader.DataProviderExcelReader.readExcelData("factoA", 2, 5);
+	
+
+	
+	
+	System.out.println("methos is ====="+Method);
+	
+}	*/
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	 /* public static void main(String[] args) {
+	        String filePath ="C:\\Users\\desktop\\eclipse\\PracticeRestAPi\\src\\test\\resources\\Api-ValidationPN\\LoginApiSheets.xlsx";
+
+	        try (FileInputStream fis = new FileInputStream(filePath);
+	             Workbook workbook = WorkbookFactory.create(fis)) {
+
+	            processWorkbook(workbook);
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	        }
+	    }
+
+	    private static void processWorkbook(Workbook workbook) {
+	        int numberOfSheets = workbook.getNumberOfSheets();
+
+	        for (int i = 0; i < numberOfSheets; i++) {
+	            Sheet sheet = workbook.getSheetAt(i);
+	            String sheetname = sheet.getSheetName();
+	            System.out.println("Sheet Name: "+ sheetname);
+	            
+	            if (sheetname.equals("factoA"))
+	            {
+	            for (Row row : sheet) {
+	                for (Cell cell : row) {
+	                    String cellValue = getCellValue(cell);
+	                    System.out.print(cellValue + "\t");
+	                }
+	               // System.out.println();
+	            }
+	           // System.out.println();
+	            
+	            }
+	            }
+	        }
+	    private static String getCellValue(Cell cell) {
+	        String cellValue;
+	        switch (cell.getCellType()) {
+	            case STRING:
+	                cellValue = cell.getStringCellValue();
+	                break;
+	            case NUMERIC:
+	                cellValue = String.valueOf(cell.getNumericCellValue());
+	                break;
+	            case BOOLEAN:
+	                cellValue = String.valueOf(cell.getBooleanCellValue());
+	                break;
+	            case FORMULA:
+	                cellValue = cell.getCellFormula();
+	                break;
+	            default:
+	                cellValue = "";
+	        }
+	        return cellValue;
+	    }
+	    
+	}
+	*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
