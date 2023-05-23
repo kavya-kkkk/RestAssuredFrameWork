@@ -1,0 +1,38 @@
+firstname and last name , it should accept alphanumberic and it should accept only 50 character
+when we turn off the internet and try do login which not showing any error, please give error message like "check your internet connection and try again"
+After login home page ,when we click on user menu icon , the home page is moving as a slide and we are able to move the homepage /charity page from lift to right, it should not be like this
+
+
+
+
+
+
+
+In sign in and login page social media logo image is blured
+before login header part is missing
+sign up page,phone number ,country drop should be as per the design
+password  text filed ,place holde text should be as per the design now its "Enter a password" 
+check box right side text should be aligned as per the figma
+create account below button text should be aligned as per the design 
+header part . the raffles image ,"rafle end " below text color should be as per the design
+"won in prizes so far" above 8.94M "$"  cash symbol is missing
+winner,charity and gift logo should be as per the design
+winner logo ,below number of winner (ex:27669 ) the number should be 27,669
+charity logo below text "donated to UK charities" aligned as per the design
+live competitons , we have 3 active raffles , but which is showing 0 active raffles
+live competitions ,below raffles image , "ending in" text is missing as per the design
+live competitions ,below raffles image ,ticket logo is not displayed as per the design
+ the awaiting draw ,ticket ,live draw and time logo is not displayed properly
+header part, gift logo and offres text shuld be aligned properly as per the design
+sign up button size should be as per the design 
+"CHOOSE YOUR SIGN UP OFFER"  section padding and text alignement should be as per the design
+header part ,raffles details padding should be as per the design
+header part ,raffles progress bar design should be as per the design
+winners ,charity,gift height should be as per the design
+give the spaces between live competions ,active raffles, and ending soon  sections as per the design
+the charity page header part, total raised charity section is displying like disabled , it should be display as per the design(both dark and light)
+charity age "view site" button padding should be as per the design 
+  "ActionAid UK,Hosppice UK and Alzheimer’s Society UK" logo should be as per the design
+charity page, some logo as displaying sqaure shapes make its as round shape as per the design
+charity page the list of charity logo size  should be as pper the design
+when we click on user menu icon , the home page is moving as a slide and we can able move the homepage /charity page from lift to right, it should not be like this 

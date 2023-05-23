@@ -1,0 +1,136 @@
+ private static final String FILE_NAME = "C:\\Users\\desktop\\eclipse\\PracticeRestAPi\\src\\test\\resources\\Api-ValidationPN\\LoginApiSheets.xlsx";
+	  //  private static final String SHEET_NAME = "Sheet1";
+
+	    @DataProvider(name = "RestSheetApi")
+	    public static Object[][] readExcelData() throws IOException {
+	        List<Object[]> data = new ArrayList<>(); 
+	        File file = new File(FILE_NAME);
+	          FileInputStream inputStream = new FileInputStream(file);
+	        Workbook workbook = WorkbookFactory.create(inputStream);
+	      //  Sheet sheet = workbook.getSheet(SHEET_NAME);
+	       int NumberofSheet = workbook.getNumberOfSheets();
+	        try {
+				for(int k = 0; k <= NumberofSheet; k++) {
+					System.out.println(k+"sheet index");
+				Sheet sheet = workbook.getSheetAt(k);
+				int rowCount = sheet.getLastRowNum();
+				for (int i = 1; i <= rowCount; i++) { // start from second row
+				    Row row = sheet.getRow(i);
+				    Object[] rowValues = new Object[row.getLastCellNum()];
+				    for (int j = 0; j < row.getLastCellNum(); j++) 
+				    
+				    {
+				        Cell cell = row.getCell(j, Row.MissingCellPolicy.RETURN_BLANK_AS_NULL);
+				       System.out.println("cell============"+cell);
+				        
+				        if (cell != null) {
+				            rowValues[j] = getCellValue(cell);
+				        } else {
+				            rowValues[j] = null;
+				        }
+				    }
+				    
+				 data.add(rowValues); 
+				
+				}
+				}
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				String error = e.getMessage();
+				System.out.println("sheet is null"+ error);
+			}
+	        
+	        return data.toArray(new Object[0][0]);
+}
+	    
+	    
+	    
+	    
+	    private static Object getCellValue(Cell cell) {
+	        CellType cellType = cell.getCellType();
+	        switch (cellType) {
+	            case BOOLEAN:
+	                return cell.getBooleanCellValue();
+	            case NUMERIC:
+	                return cell.getNumericCellValue();
+	            case STRING:
+	                return cell.getStringCellValue();
+	            default:
+	                return null;
+	        }
+	    }
+	
+	    
+	    
+	    
+	    @Test(dataProvider = "RestSheetApi")
+		public void RestApiLoginValidations(String Method, String EndPoint, String Payload, double ExpectedStatusCodeDouble,
+				String ExpectedResponseBody, String ExpectedHeaderContentType)
+
+		{
+
+			Response response = RestAssured
+
+					.given() 
+
+					.baseUri("https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing")
+					.contentType(ContentType.JSON).body(Payload)
+
+					.when()
+
+					.post(EndPoint)
+
+					.then()
+
+					.extract()
+
+					.response();
+			// To ActualStatusCode from response body and To Print
+			int ActualStatusCode = response.getStatusCode();
+			
+
+			// To ActualResponseBody from response body and To print
+			String ActualResponseBody = response.getBody().asString();
+			
+			// To ActualHeaderContentType from response body and To print
+			String ActualHeaderContentType = response.header("Content-Type");
+			
+
+			// To convert from double to integer (while fetching will get integer as double)
+			// and to print
+			int ExpectedStatusCode = (int) ExpectedStatusCodeDouble;
+			
+
+			
+			
+
+				try {
+					// To print and To validate both (exp and act status code)
+					Reporter.log("Actual status code is " + "=>" + ActualStatusCode + "=>" + "-AND-" + "expected status code"
+							+ "=>" + ExpectedStatusCode);
+					Assert.assertEquals(ActualStatusCode, ExpectedStatusCode, "Expected status code is  Incorrect");
+				} catch (Exception e) {
+					
+					String errormsg=e.getMessage();
+					System.out.println("error msg "+errormsg);
+				}
+
+				// To print response body
+				Reporter.log("Actual Response body" + " =>" + ActualResponseBody + "=>" + "Expected Response Body is" + "=>"
+						+ ExpectedResponseBody);
+				Assert.assertEquals(ActualResponseBody.contains(ExpectedResponseBody), true, "Incorrect Expeted body");
+
+				// To print headers ActualHeaderContentType
+				Reporter.log("Actual Response body" + " =>" + ActualHeaderContentType + "=>" + "Expected Response Body is"
+						+ "=>" + ExpectedHeaderContentType);
+				Assert.assertEquals(ActualHeaderContentType.contains(ExpectedHeaderContentType), true,
+						"Incorrect  Expected Header ContentType");
+				System.out.println(" status code is "+ ActualStatusCode);
+
+			
+
+		}}
+
+
+
+

@@ -1,0 +1,27 @@
+charity page , after" suppporting one of the charity" , the supported "charity details" should be aligned properly as the design
+charity page ,the supported "charity logo szie"  should be as per the design 
+winner page,there is no under line below the" based on reviews "text 
+winner page ,"top winner in months below" ,when we are moving image the page dot( .......) should be changed based on the images position as per the design
+winner page, top winner in months below ,"draw details  button" should be aligned as per the design 
+winner page ,top winner in months below ,"winner image" should displayed one of ther other now its displaying only one image
+winner page , excellent below ,"trustpilot image" should be display as per the design
+winner page trustpilot "text" and "logo size" should be as per the design
+winner page ,"winner list" heading text size should be as per the design
+winner page ,when we selected ,a particular month the month .the selected month name text should be bold and remaing moth text color should be grey and size should be as per the design(both dark and light theme)
+winner page ,header part winners so far box outline thickness should be as per the design
+winner page ,when we are changing month , the draw details button poistion is varing for different months
+winner page ,winners search field is not working 
+winner page ,draw details button is not working  
+winner page ,No winners this month ... yet! Keep checking this space. the text is not visible in dark theme
+winner page ,when we are searching drawn details by using month or data it should be display as per the design
+winner page ,when we searching by using month name ,some time which is showing "Your search was not found. Please try again.
+
+
+
+winners page dark theme , when we selected a month , the selected month color should whilte in dark theme
+
+winners page dark theme,draw details button back ground color should be as per the design
+
+credit page ,credit balance  123.00 the decimal values text size  should be as per the design
+
+creadit page , today there is no history , buut which is displaying today heading , remove the today section

@@ -25,7 +25,7 @@ public class LoginFTValidations {
 				.baseUri("https://91fjgvixl9.execute-api.ap-south-1.amazonaws.com/testing")
 				.contentType(ContentType.JSON).body(Payload)
 
-				.when()
+				.when() 
 
 				.post(EndPoint)
 
@@ -53,16 +53,15 @@ public class LoginFTValidations {
 		
 		
 
-			try {
+		
 				// To print and To validate both (exp and act status code)
 				Reporter.log("Actual status code is " + "=>" + ActualStatusCode + "=>" + "-AND-" + "expected status code"
 						+ "=>" + ExpectedStatusCode);
 				Assert.assertEquals(ActualStatusCode, ExpectedStatusCode, "Expected status code is  Incorrect");
-			} catch (Exception e) {
+		
 				
-				String errormsg=e.getMessage();
-				System.out.println("error msg "+errormsg);
-			}
+			
+		
 
 			// To print response body
 			Reporter.log("Actual Response body" + " =>" + ActualResponseBody + "=>" + "Expected Response Body is" + "=>"

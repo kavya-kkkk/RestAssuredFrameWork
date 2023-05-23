@@ -1,0 +1,18 @@
+Who own page,header part , drew deatils "<" arrow mark should be as per the design
+Who own page,Drawn:" May 15th 2019,500 total entries ,1 Winner and Winner(s)"  ,Logo and size should be as per the design
+Who own page, the sort ico hight and widthe should be as per the design
+Who own page, header part "draw details " padding should be as per thhe design
+Who own page,"Draw provided and verified by" txt font family should be as per the design
+Who own page,"This certifies that Raffolux Ltd, a limited registered company in England & Wales ........" text font family should be as per the design
+Who own page,when selected dark theme ,in dark theme "who own " page is displaying as disabled and once we refresh the page which is displaying light theme "who own " page
+
+
+
+Non-instant,instant page raffles , ticket prize padding should be as per the design both dark and light theme
+Non-instant page,raffles details, user logo below text should be "number of ticket max per person " as per the design now its , ticket entry prize
+Non-instant ,instant raffles page,draw details should aligned properly as per the design(both dark and light theme)
+Non-instant page raffles,"See terms for free postal entry*"  text tickness should redused as per the desgin
+Non-instant ,instant page raffles,"prizes and description" button padding is not aligned properly as per the design
+Instant page raffles, "show more button is missing as per the design
+
+

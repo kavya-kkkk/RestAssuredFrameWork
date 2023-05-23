@@ -1,0 +1,8 @@
+Before sign in,non instant and instant page ,"draw details" and ticket logo should be as per the design(both dark and light theme)
+Before sign in,non instant page ,ticket process bar" percentage" design should be as per the design(both dark and light theme)
+Before sign in,non instant page ,excellent "based on " text color should be as per the design light theme
+Before sign in,non instant page ,"raffles details section "should be aligned properly as per the design(both dark and light theme)
+Before sign in,non instant and  instant page ,in light theme,"excellent and trustpilot "section text is not visible 
+Before sign in,instant page ,top prizes logo should as per the design
+Before sign in,instant page ,all prizes," ascending and desending "arrow mark" design and , color and size  should be as per the design(both dark and light) 
+Before sign in,instant page ,the list of all prizes and top prizes , the space between each prizes  should be as per the design
